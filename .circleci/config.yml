@@ -17,6 +17,10 @@ jobs:
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
+      - run:
+          name: "Say commit message"
+          command: "echo << pipeline.trigger_parameters.github_app.commit_message >>"
+
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
